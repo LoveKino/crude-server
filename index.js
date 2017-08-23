@@ -4,10 +4,6 @@ let http = require('http');
 
 let url = require('url');
 
-let {
-    forEach
-} = require('bolzano');
-
 /**
  * TODO some default mids
  */
@@ -57,7 +53,7 @@ module.exports = (apier) => {
     let stop = () => {
         if (!server) return;
         return new Promise((resolve, reject) => {
-            forEach(sockets, (socket) => {
+            sockets.forEach((socket) => {
                 socket && socket.destroy();
             });
 

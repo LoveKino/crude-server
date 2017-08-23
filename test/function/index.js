@@ -1,6 +1,6 @@
 'use strict';
 
-let crude = require('..');
+let crude = require('../..');
 
 let requestor = require('cl-requestor');
 let httpRequest = requestor('http');
