@@ -15,13 +15,11 @@ module.exports = (apier) => {
     let start = (port = 0) => {
         if (server) return;
         server = http.createServer((req, res) => {
-            let {
-                pathname
-            } = url.parse(req.url);
+            let urlObject = url.parse(req.url, true);
             // filter api
-            let api = apier(pathname, req.url, req);
+            let api = apier(urlObject.pathname, req.url, req);
             if (api) {
-                return api(req, res);
+                return api(req, res, urlObject);
             } else {
                 res.end('unsupported api');
             }
