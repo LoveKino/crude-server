@@ -1,8 +1,9 @@
 'use strict';
 
 let http = require('http');
-
 let url = require('url');
+
+let log = console.log; // eslint-disable-line
 
 /**
  * TODO some default mids
@@ -19,7 +20,7 @@ module.exports = (apier) => {
             // filter api
             let api = apier(urlObject.pathname, req.url, req);
             if (api) {
-                return api(req, res, urlObject);
+                api(req, res, urlObject);
             } else {
                 res.end('unsupported api');
             }
@@ -28,6 +29,9 @@ module.exports = (apier) => {
         server.on('connection', (socket) => {
             let id = nextSocketId++;
             sockets[id] = socket;
+            socket.on('error', (err) => {
+                log(err);
+            });
 
             socket.on('close', () => {
                 delete sockets[id];

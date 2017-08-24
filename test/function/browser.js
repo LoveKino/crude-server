@@ -15,11 +15,13 @@ let runFileInBrowser = async(file) => {
         clean: true,
 
         apiMap: {
-            '/api/pfc': pfcApiMid({
-                add: (a, b) => a + b,
-                error: () => {
-                    throw new Error('123');
-                }
+            '/api/pfc': pfcApiMid(() => {
+                return {
+                    add: (a, b) => a + b,
+                    error: () => {
+                        throw new Error('123');
+                    }
+                };
             })
         }
     });

@@ -11,8 +11,10 @@ describe('pfcApiMid', () => {
     it('base', () => {
         return testApier((pathname) => {
             if (pathname === '/api') {
-                return pfcApiMid({
-                    add: (a, b) => a + b
+                return pfcApiMid(() => {
+                    return {
+                        add: (a, b) => a + b
+                    };
                 });
             }
         }, {
@@ -34,10 +36,12 @@ describe('pfcApiMid', () => {
     it('error', () => {
         return testApier((pathname) => {
             if (pathname === '/api') {
-                return pfcApiMid({
-                    add: () => {
-                        throw new Error('123');
-                    }
+                return pfcApiMid(() => {
+                    return {
+                        add: () => {
+                            throw new Error('123');
+                        }
+                    };
                 });
             }
         }, {
@@ -55,5 +59,4 @@ describe('pfcApiMid', () => {
             });
         });
     });
-
 });
