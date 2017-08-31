@@ -1,6 +1,6 @@
 'use strict';
 
-let simpleServer = require('../../lib/simpleServer');
+let simpleServer = require('../../lib/server/simpleServer');
 let requestor = require('cl-requestor');
 let httpRequest = requestor('http');
 let assert = require('assert');

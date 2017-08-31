@@ -4,7 +4,7 @@ let browserJsEnv = require('browser-js-env');
 let promisify = require('es6-promisify');
 let fs = require('fs');
 let path = require('path');
-let pfcApiMid = require('../../lib/pfcApiMid');
+let pfcApiMid = require('../../lib/server/pfcApiMid');
 
 let readFile = promisify(fs.readFile);
 

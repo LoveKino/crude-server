@@ -25,11 +25,14 @@
   "devDependencies": {
     "browser-js-env": "0.0.11",
     "cl-requestor": "0.0.3",
+    "del": "^3.0.0",
     "es6-promisify": "^5.0.0",
     "mocha": "^3.0.2"
   },
   "dependencies": {
     "bolzano": "0.0.1",
-    "pfc-compiler": "^0.1.7"
+    "mkdirp": "^0.5.1",
+    "pfc-compiler": "^0.1.7",
+    "tree-script": "0.0.3"
   }
 }

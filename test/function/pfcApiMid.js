@@ -1,6 +1,6 @@
 'use strict';
 
-let pfcApiMid = require('../../lib/pfcApiMid');
+let pfcApiMid = require('../../lib/server/pfcApiMid');
 
 let assert = require('assert');
 let {

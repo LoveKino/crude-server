@@ -1,6 +1,6 @@
 'use strict';
 
-let pfcRequestor = require('../../webLib/pfcRequestor');
+let pfcRequestor = require('../../lib/web/pfcRequestor');
 let assert = require('assert');
 
 let request = pfcRequestor('/api/pfc');
