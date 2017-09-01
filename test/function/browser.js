@@ -29,6 +29,7 @@ let runFileInBrowser = async(file) => {
 
 let testFiles = {
     'pfcRequestor': path.join(__dirname, '../browser/pfcRequestor.js'),
+    'pfcApis': path.join(__dirname, '../browser/pfcApis.js'),
 };
 
 describe('crude-server:browser', () => {
