@@ -1,6 +1,6 @@
 {
   "name": "crude-server",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "crude server",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,6 @@
     "bolzano": "0.0.1",
     "mkdirp": "^0.5.1",
     "pfc-compiler": "^0.1.8",
-    "tree-script": "0.0.3"
+    "tree-script": "0.0.5"
   }
 }
